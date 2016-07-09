@@ -4,7 +4,9 @@ app.controller("PokemonCtrl", function($scope) {
 	// you want to add scope to your object 
 	// so that'pokemon' is shared by app.js and view
   
-  $scope.catchphrase = "gotta catch 'em all!";	
+  $scope.trainer = "Ash";
+
+  // $scope.catchphrase = "gotta catch 'em all!";	
 
   $scope.pokemon = [
   	{
