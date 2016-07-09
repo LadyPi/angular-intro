@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+
+	<title>Document</title>
+</head>
+
+	<!-- ng-app tells HTML page to use Angular -->
+	<body ng-app="ngFun">
+		
+		<!-- <div>{{ 4*4 }}</div>
+		<div>{{ "hola!" | uppercase }}</div>
+		<div>{{ ['s', 'w', 'e', 'e', 't', 'n', 'e', 's', 's'].join("") }}</div> -->
+
+	  <div ng-controller="PokemonCtrl">
+		
+		<h1>Trainer: {{ trainer }} </h1>
+
+		<span>Enter your name:</span>
+		<input ng-model="trainer"/>
+		
+		<pre>Pokemon: {{ pokemon | json }}</pre>
+
+		<!-- <pre> {{ catchphrase }} </pre> -->
+
+		<!-- displayed in a fixed-width
+		font, and it preserves
+		both      spaces and
+		line breaks -->
+
+	  </div>
+
+	</body>
+</html>
+
