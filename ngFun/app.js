@@ -1,9 +1,14 @@
 var app = angular.module("ngFun", []);
 
-app.controller("PokemonCtrl", function($scope) {
+// this needs to be refactored for injection
+// app.controller("PokemonCtrl", function($scope) {
 	// you want to add scope to your object 
 	// so that'pokemon' is shared by app.js and view
   
+app.controller("PokemonCtrl", PokemonCtrl);
+PokemonCtrl.$inject = ['$scope', 'reverseFilter'];
+function PokemonCtrl($scope, reverseFilter) {
+
   // $scope.trainer = "Ash";
 
   // $scope.catchphrase = "gotta catch 'em all!";	
@@ -34,4 +39,17 @@ app.controller("PokemonCtrl", function($scope) {
   	  type: 'Normal'
   	}
   ];
+}
+
+app.filter('reverse', function() {
+  return function(input) {
+    input = input || '';
+    var out = input.split("").reverse().join("");
+    // uppercase only first letter
+    out = out.toLowerCase();
+    out = out[0].toUpperCase() + out.slice(1);
+    return out;
+  };
 });
+
+// Note: filters require a function to be returned.

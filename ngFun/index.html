@@ -24,7 +24,7 @@
 
 		<!-- <span>Enter your name:</span> -->
 		Trainer Search: <input ng-model="trainer.name" placeholder="Enter your name" />
-		Poke Search: <input ng-model="pokesearch" placeholder="Enter Poke" />
+		Pokemon Search: <input ng-model="pokesearch" placeholder="Enter Poke" />
 
 		<!-- <ul> -->
 		<!-- I used poke in pokemon vs pokeman in pokemon -->
@@ -41,6 +41,7 @@
 			  <th> Ndex </th>
 			  <th> Name </th>
 			  <th> Type </th>
+			  <th> Nemeses </th>
 		    </tr>
 		  </thead>
 		  <tbody>
@@ -49,6 +50,7 @@
 		      <td> {{ poke.Ndex }} </td>
 		      <td> {{ poke.name }} </td>
 		      <td> {{ poke.type }} </td>
+		       <td> {{ poke.name | reverse }} </td>
 
 		    </tr>
 		  </tbody>	
