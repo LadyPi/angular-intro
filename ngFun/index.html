@@ -23,8 +23,9 @@
 		<h1>Trainer: {{ trainer.name }} </h1>
 
 		<!-- <span>Enter your name:</span> -->
-		<input ng-model="trainer.name" placeholder="Enter your name" />
-		
+		Trainer Search: <input ng-model="trainer.name" placeholder="Enter your name" />
+		Poke Search: <input ng-model="pokesearch" placeholder="Enter Poke" />
+
 		<!-- <ul> -->
 		<!-- I used poke in pokemon vs pokeman in pokemon -->
 			<!-- <li ng-repeat="poke in pokemon">
@@ -43,7 +44,7 @@
 		    </tr>
 		  </thead>
 		  <tbody>
-		    <tr ng-repeat="poke in pokemon | orderBy:'+Ndex'">
+		    <tr ng-repeat="poke in pokemon | orderBy:'+Ndex' | filter: pokesearch">
 
 		      <td> {{ poke.Ndex }} </td>
 		      <td> {{ poke.name }} </td>
