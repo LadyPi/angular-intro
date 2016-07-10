@@ -20,13 +20,19 @@
 
 	  <div ng-controller="PokemonCtrl">
 		
-		<button ng-click="count = count + 1" ng-init="count=0">
+		<label>Click me:<input type="checkbox" ng-model="checked" ng-init="checked=true"></label>
+
+		Show when checked:
+		<span ng-if="checked" class="animate-if">
+		 This is removed when the checkbox is unchecked.
+		</span>
+
+		<!-- <button ng-click="count = count + 1" ng-init="count=0">
 			Increment
 		</button>
 		<span>
 			count: {{ count }}
-		</span>
-
+		</span> -->
 
 		<h1>Trainer: {{ trainer.name }} </h1>
 
