@@ -20,6 +20,14 @@
 
 	  <div ng-controller="PokemonCtrl">
 		
+		<button ng-click="count = count + 1" ng-init="count=0">
+			Increment
+		</button>
+		<span>
+			count: {{ count }}
+		</span>
+
+
 		<h1>Trainer: {{ trainer.name }} </h1>
 
 		<!-- <span>Enter your name:</span> -->
